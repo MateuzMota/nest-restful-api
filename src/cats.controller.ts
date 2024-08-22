@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { CreateCatDto } from './dtos/create-cat.dto';
 import { UpdateCatDto } from './dtos/update-cat.dto';
 
@@ -23,5 +23,10 @@ export class CatsController {
   update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
     console.log(`The cat id: #${id} was updated`, updateCatDto);
     return `This action updates a #${id} cat`;
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string): string {
+    return `This action removes a #${id} cat`;
   }
 }
