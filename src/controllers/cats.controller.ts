@@ -1,6 +1,14 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { CreateCatDto } from './dtos/create-cat.dto';
-import { UpdateCatDto } from './dtos/update-cat.dto';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
+import { CreateCatDto } from '../dtos/create-cat.dto';
+import { UpdateCatDto } from '../dtos/update-cat.dto';
 
 @Controller('cats')
 export class CatsController {
